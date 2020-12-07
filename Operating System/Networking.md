@@ -1,5 +1,29 @@
 # Networking
 
+## OSI Layer Model
+
+Seven Layers:
+
+```Mermaid
+graph
+    A[Application] --> P[Presentation]
+    P --> S[Session]
+    S --> T[Transport]
+    T --> N[Network]
+    N --> DL[Data Link]
+    DL --> PL[Physical Link]
+```
+
+Layers:
+- **Application layer**
+  - Meaningful functionality for the user (e.g. *HTTP*, *FTP*, *SMTP*, *SSH*) plus common support protocols (e.g. *DNS*, *BGP*)
+- **Transport layer**
+  - Reliable transmission, connection management (*TCP*), or not (*UDP*)
+- **Internet layer**
+  - Addressing and routing packets through a network, without reliability (*IP*)
+- **Link layer**
+  - Direct connection between hosts, semi-reliable (e.g. *Ethernet*, Wi-*Fi*)
+
 ## Port
 
 To send a datagram (packet) to a host on the Internet using IPv4 (or IPv6) you need to specify the host address and a port. The port is an unsigned **16** bit number (i.e. the maximum port number is `65535`).
